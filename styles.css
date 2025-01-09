@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #ff9800;
+}
+
+/* Home Section Styles */
+.home-section {
+    background-color: #f4f4f4;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.home-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.home-section p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Services Section Styles */
+.services-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.service-box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-box {
+    padding: 2rem;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service-box h3 {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.service-box p {
+    color: #666;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Team Section Styles */
+.team-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #ddd;
+    padding: 5px;
+    background-color: white;
+}
+
+.team-member h3 {
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    color: #666;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4;
+}
+
+.contact-section p {
+    text-align: center;
+    color: #555;
+}
+
+.map-container {
+    max-width: 800px;
+    margin: 2rem auto 0;
+}
+
+iframe {
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+}
+/* Back-to-Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+#back-to-top:hover {
+    background-color: #555;
+}
+
+/* Dark/Light Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+.dark-mode .navbar {
+    background-color: #222;
+}
+.dark-mode .service-box {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+/* Accordion */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+}
+.accordion:hover {
+    background-color: #ddd;
+}
+.panel {
+    padding: 0 15px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Partner Profile Hover */
+.team-member {
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}

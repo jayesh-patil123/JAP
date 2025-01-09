@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #0078D7;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .service-details-section {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        #service-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #0078D7;
+        }
+
+        #service-content {
+            font-size: 18px;
+            line-height: 1.6;
+            padding: 20px;
+            border: 2px solid #0078D7;
+            border-radius: 8px;
+            background-color: #f9fbfd;
+        }
+
+        #service-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #service-content ul li {
+            position: relative;
+            padding: 10px 0;
+            padding-left: 30px;
+        }
+
+        #service-content ul li:before {
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #0078D7;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0078D7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">J A P & Associates</a></div>
+        </nav>
+    </header>
+    
+    <section class="service-details-section">
+        <h1 id="service-title"></h1>
+        <div id="service-content"></div>
+        <button onclick="history.back()">← Back to Services</button>
+    </section>
+
+    <script src="details.js"></script>
+    <script>
+        // Get service ID from the URL
+        const params = new URLSearchParams(window.location.search);
+        const serviceId = params.get("service");
+
+        // Render service details
+        if (serviceId && serviceDetails[serviceId]) {
+            const service = serviceDetails[serviceId];
+            document.getElementById("service-title").textContent = service.title;
+            document.getElementById("service-content").innerHTML = service.content;
+        } else {
+            document.getElementById("service-title").textContent = "Service Not Found";
+            document.getElementById("service-content").textContent = "The requested service does not exist.";
+        }
+    </script>
+</body>
+</html>

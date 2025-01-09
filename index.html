@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J A P & Associates Chartered Accountants</title>
+    <!-- Link to CSS File -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<!-- Link to JS File -->
+<script src="script.js"></script>
+<script src="details.js"></script>
+<body>
+    
+    <!-- Navbar Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">J A P & Associates</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h1>Welcome to J A P & Associates</h1>
+            <p>Your Trusted Chartered Accountants Firm</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>J A P & Associates is a leading Chartered Accountants firm based in Pune, providing a range of financial and accounting services with professionalism and dedication. Our team comprises experienced professionals with expertise in Direct Tax, Indirect Tax, Auditing, and much more. We strive to deliver quality and tailored solutions to meet our client’s unique needs.</p>
+    </section>
+
+    <!-- Services Section -->
+<section id="services" class="services-section">
+    <h2>Our Services</h2>
+    <div class="service-box-container">
+        <div class="service-box" data-service-id="audit" onclick="redirectToDetails('audit')">
+            <h3>Audit & Assurance</h3>
+            <p>Includes statutory audit, tax audit, internal audit, and more.</p>
+        </div>
+        <div class="service-box" data-service-id="direct-taxes" onclick="redirectToDetails('direct-taxes')">
+            <h3>Direct Taxes</h3>
+            <p>Filing of returns, tax audits, appeals, and compliance.</p>
+        </div>
+        <div class="service-box" data-service-id="indirect-taxes" onclick="redirectToDetails('indirect-taxes')">
+            <h3>Indirect Tax</h3>
+            <p>GST migration, compliance, audits, and VAT-related services.</p>
+        </div>
+        <div class="service-box" data-service-id="advisory" onclick="redirectToDetails('advisory')">
+            <h3>Advisory Services</h3>
+            <p>Business plans, project reports, and consultation on taxes.</p>
+        </div>
+        <div class="service-box" data-service-id="book-keeping" onclick="redirectToDetails('book-keeping')">
+            <h3>Book Keeping</h3>
+            <p>Outsourcing services for accounting and MIS reports.</p>
+        </div>
+        <div class="service-box" data-service-id="virtual-office" onclick="redirectToDetails('virtual-office')">
+            <h3>Virtual Office</h3>
+            <p>Office infrastructure and HR services for SMEs.</p>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <h2>Our Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="Jugal_Patil.jpeg" alt="CA Ankush M. Patil">
+                <h3>CA Ankush M. Patil</h3>
+                <p>FCA, M. Com</p>
+            </div>
+            <div class="team-member">
+                <img src="Jugal_Patil.jpeg" alt="CA Pratiksha P. Patni">
+                <h3>CA Pratiksha P. Patni</h3>
+                <p>FCA, B. Com</p>
+            </div>
+            <div class="team-member">
+                <img src="Jugal_Patil.jpeg" alt="CA Jugal P. Patil">
+                <h3>CA Jugal P. Patil</h3>
+                <p>ACA, B. Com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>J A P & Associates, Chartered Accountants</p>
+        <p>Address: 205, City Mall, Near E-Square Mall, University Road, Pune, 411007</p>
+        <p>Email: japandassociates@gmail.com</p>
+        <p>Phone: +91 9764495436, +91 7276780926, +91 7588937518</p>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.450625816242!2d73.8155!3d18.5305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1dfdfd12345%3A0xabcdef123456789!2sCity%20Mall!5e0!3m2!1sen!2sin!4v1612345678901" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    <!-- Back-to-Top Button -->
+<button id="back-to-top" style="display: none;">⬆ Back to Top</button>
+
+<!-- Dark/Light Mode Toggle -->
+<button id="theme-toggle">Dark Mode</button>
+
+<!-- Search Bar -->
+<input type="text" id="search-bar" placeholder="Search services..." />
+
+<!-- Accordion for Services -->
+<div>
+    <button class="accordion">Service 1</button>
+    <div class="panel">
+        <p>Details about Service 1...</p>
+    </div>
+    <button class="accordion">Service 2</button>
+    <div class="panel">
+        <p>Details about Service 2...</p>
+    </div>
+    <!-- Add more accordions as needed -->
+</div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 J A P & Associates Chartered Accountants. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
